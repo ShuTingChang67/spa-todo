@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The List that never ends</title>
+    <link rel="stylesheet" href="todo.css">
+    <script src="todo.js" defer></script>
+</head>
+<body onload="bootstrap()">
+    <div id="home">
+        <!-- Code for Q1 starts-->
+        <h1>Prioritize Your To-Do's</h1>
+        <!-- <div id="restartBtnDiv">
+            <button id="restartBtn" onclick="restart()">Start from Zero</button>
+        </div> -->
+        <!-- Code for Q1 ends-->
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#add">Add</a></li>
+            <li><a href="#finish">Finish</a></li>
+            <li><a href="#display">Display</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <div id="add">
+            <h2>Create A New Task</h2>
+            <form>
+            <!-- Code for Q2 starts. Accept new task from user. 
+                Finally, when the user clicks the submit button,
+                use the onclick event to call addfunction() in
+                todo.js file. Note that you can use something
+                similar to <body onload="bootstrap()"> instead of 
+                using an addEventListener. 
+            -->
+                <label for="tname">Task Description</label><br>
+                <input type="text" id="tname" name="tname"><br><br>
+                <label for="priority">Priority</label><br>
+                <select type="number" name="priority" id="priority">
+                    <option disabled selected value> -- select an option -- </option>
+                    <option value="1">1 Most Important</option>
+                    <option value="2">2 More Important</option>
+                    <option value="3">3 Important</option>
+                    <option value="4">4 Less Important</option>
+                    <option value="5">5 Least Important</option>
+                </select><br><br>
+                <label for="deadline">Deadline</label><br>
+                <input type="date" id="deadline" name="deadline"><br><br>
+            <!-- Code for Q2 ends -->
+            </form>          
+            <div id="addBtnDiv">
+                <button id="addBtn" onclick="addfunction()">Add</button><br><br> 
+                <div id="errorMes"></div>
+            </div>
+        </div>
+        <hr class="solid">
+        <div id="finish">
+            <h2>Set A Task Completed</h2>
+            <form>
+            <!-- Code for Q3 starts. Finish a task given the ID/Sno. 
+                 When the user clicks the submit button, use the onclick
+                 event to call finishfunction() in todo.js file. 
+            -->
+            <label for="serialNo">Serial Number (Sno)</label><br>
+            <!-- <input id="serialNo" type="number" name="serialNo"><br><br> -->
+            <select type="number" name="serialNo" id="serialNo">
+                <option disabled selected value> -- select an option -- </option>
+            </select><br><br>
+
+            <!-- Code for Q3 ends -->
+            </form>
+            <div id="finishBtnDiv">
+                <button id="finishBtn" onclick="finishfunction()">Confirm</button><br><br> 
+                <!-- <div id="finishErrMes"></div> -->
+            </div>
+        </div>
+        <hr class="solid">
+        <div id="display">
+            <!-- HTML code for Q4 has been written already.
+                 You will have to write the corresponding JS code
+                 to populate the tables. 
+                 An important design choice involves when to call the 
+                 JS function that populates the tables.
+            -->
+            <div id="rowTb">
+                <h2>Tasks Lists</h2>
+                <!-- Display outstanding list of Tasks -->
+                <div id="leftTb">
+                    <h3>Outstanding Tasks (10 Max)</h3>
+                    <table id="displayoutstanding">
+                        <thead>
+                            <tr>
+                                <th>Sno</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div id="clearOBtnDiv">
+                        <button id="clearOBtn" onclick="clearOutstand()">Clear All</button>
+                    </div>
+                </div>
+                <!-- Display Completed Tasks -->
+                <div id="rightTb">
+                    <h3>Completed Tasks</h3>
+                    <table id="displaycompleted">
+                        <thead>
+                            <tr>
+                                <th>Sno</th>
+                                <th>Description</th>
+                                <th>Priority</th>
+                                <th>Deadline</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <div id="clearCBtnDiv">
+                        <button id="clearCBtn" onclick="clearCompleted()">Clear All</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

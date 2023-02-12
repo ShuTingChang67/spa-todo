@@ -1,0 +1,240 @@
+/* Basic CSS styling has been provided to you.
+ * For Q6, try to enhance this CSS.
+ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eaece5;
+    height:100%;
+}
+
+#home {
+    background-image: url("./home_bg_copyright_free.jpg"); /* copyright free image */
+    background-position: right center;
+    background-size: cover;
+    height:280px;
+    opacity: 0.85;
+}
+
+#home h1 {
+    color: #3b3a30;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 0;
+    padding: 70px 0;
+    padding-left: 20px;
+}
+
+/* #restartBtnDiv {
+    padding-left: 20px;
+}
+
+#restartBtn {
+    background-color: #c0ded9;
+    border: none;
+    border-radius: 8px;
+    color: #3b3a30;
+    font-weight: bold;
+    padding: 10px 30px;
+}
+
+#restartBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+} */
+
+nav ul {
+    background-color: #588c7e;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;   
+}
+
+nav ul li a {
+    color: #eaece5;
+    display: block;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #eaece5;
+    color: #588c7e;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+}
+
+#add {
+    display: block;
+    height: 25%;
+    margin-left: 5%;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+h2 {
+    color: #3b3a30;
+    font-style: italic;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    width: 80%;
+}
+
+#tname {
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+    padding: 8px 20px;
+    width: 50%;
+}
+
+#priority, #deadline {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 20px;
+}
+
+#errorMes {
+    color: red;
+    display: none;
+}
+
+#finish {
+    display: block;
+    height: 10%;
+    margin-left: 5%;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+/* #finishErrMes {
+    color: red;
+    display: none;
+} */
+
+#serialNo {
+    border: none;
+    border-radius: 8px;
+    max-width: 40%;
+    padding: 8px 20px;
+
+}
+
+#addBtn, #finishBtn {
+    background-color: #588c7e;
+    border: none;
+    border-radius: 8px;
+    color: #eaece5;
+    font-weight: bold;
+    padding: 8px 20px;
+}
+
+#addBtn:hover, #finishBtn:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#display {
+    min-height: 500px;
+    margin-bottom: 50px;
+    margin-left: 5%;
+    text-align: left;
+}
+
+#leftTb, #rightTb {
+    float: left;
+    min-height: 200px;
+    width: 50%;
+}
+
+#rowTb::after {
+    clear: both;
+    content: "";
+    display: table;
+    width: 100%;
+}
+
+#display h2 {
+    margin-bottom: 8px;
+}
+
+#display h3 {
+    text-align: left;
+}
+
+#clearOBtn, #clearCBtn {
+    background-color: #588c7e;
+    border: none;
+    border-radius: 8px;
+    color: #eaece5;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 8px 20px;
+}
+
+#clearOBtn:hover, #clearCBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+table {
+    border: 0;
+    border-collapse: collapse;
+    min-width: 80%;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+thead {
+    background-color: #588c7e;
+    color: #eaece5;
+}
+
+tbody {
+    background-color:#eaece5;
+    color: #588c7e;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+thead th {
+    color: #eaece5;
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+td {
+    background-color: white;
+    color: #3b3a30;
+    max-width: 150px;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+td:nth-child(2) {
+    max-width: 300px;
+    text-align: left;
+}
